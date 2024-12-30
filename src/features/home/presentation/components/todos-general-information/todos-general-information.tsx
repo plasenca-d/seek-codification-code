@@ -6,7 +6,10 @@ import { CreateTodoButton } from "./create-todo-button";
 
 export const TodosGeneralInformation = () => {
   return (
-    <aside className="bg-background flex justify-between items-center pt-4 pb-6">
+    <aside
+      data-testid="todos-general-information"
+      className="bg-background flex justify-between items-center pt-4 pb-6"
+    >
       <CreateTodoButton />
 
       <div className="flex flex-col items-center gap-3">
