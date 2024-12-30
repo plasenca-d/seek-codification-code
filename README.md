@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Technical Test - React/Next.js Todo App Project
 
-## Getting Started
+This is a **Next.js** application built as part of a technical test. The project demonstrates the ability to build, manage, and deploy a web application using modern technologies and best practices.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## **Purpose of the Technical Test**
+
+The purpose of this test is to evaluate the following:
+- Ability to set up and run a **React** or **Next.js** application.
+- Implementation of clean and maintainable code.
+
+---
+
+## **Getting Started**
+
+### **Requirements**
+To run this project locally, ensure you have the following installed:
+- **Node.js**: v20.10+ 
+- **pnpm**: Installed globally. If not, run:
+  ```bash
+  npm install -g pnpm
+  ```
+
+### **Steps to Run**
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://gitlab.com/plasenca/seek-codification-code.git
+   cd seek-codification-code
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   pnpm i
+   ```
+
+3. **Start the Development Server:**
+   ```bash
+   pnpm dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+---
+
+## **Project Structure**
+
+This project is organized into the following directories:
+
+```
+.
+├── app/                 # Next.js app directory
+├── components/          # Shared UI components
+├── features/            # Domain-specific modules
+├── lib/                 # Utilities and custom libraries
+├── public/              # Static assets
+├── styles/              # Global styles
+└── tests/               # Unit and integration tests
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## **Technologies Used**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js**: Framework for server-rendered and static websites.
+- **pnpm**: Efficient and fast package manager.
+- **TypeScript**: Adds static typing to JavaScript for better code quality.
+- **Jest & Testing Library**: For writing and running unit tests.
+- **ESLint & Prettier**: Ensures consistent code quality and formatting.
+- **Tailwind CSS**: For styling and responsive design.
+- **React Hook Form**: For handling form input and validation.
+- **Zod**: For defining and validating data schemas.
+- **React Query**: For fetching and caching data.
+- **Lucide React**: For icons.
+- **Framer Motion**: For animations and transitions.
+- **Zustand**: For state management.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## **Testing**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run unit tests:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm test
+```
 
-## Deploy on Vercel
+To check the code quality:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm lint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## **Deployment**
+
+This project was deployed using [GitLab CI/CD](https://gitlab.com/) to ensure continuous integration and deployment of the application connecting with Vercel.
+
+To avoid any issues, we created a Dockerfile for the deployment.
+
+```bash
+docker build -t todo-app .
+```
+
+---
+
+## **Best Practices Implemented**
+
+- **Clean Code Principles:** The project follows modular and maintainable code practices.
+- **Environment Variables:** Secure handling of sensitive information.
+- **Performance Optimization:** Efficient bundling and caching strategies.
+- **CI/CD with Docker:** Continuous integration and deployment.
+
+---
