@@ -30,7 +30,7 @@ export default function ChangeThemeFBA() {
   };
 
   return (
-    <div className="absolute right-8 bottom-8 animate-fade-up">
+    <div className="absolute right-8 bottom-8 animate-fade-up z-50">
       <div
         className={cn(
           "rounded-full bg-primary w-12 h-12 flex items-center justify-center border-foreground",
