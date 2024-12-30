@@ -1,5 +1,4 @@
 import NavBar from "@/components/layouts/nav-bar/nav-bar";
-import ChangeThemeFBA from "@/components/ui/change-theme-fba";
 import { TodosList } from "@/features/home/presentation/components/todos-by-state/todo-list";
 import { TodosGeneralInformation } from "@/features/home/presentation/components/todos-general-information/todos-general-information";
 
@@ -33,7 +32,6 @@ export default async function Home() {
       <main className="container py-8">
         <TodosList />
       </main>
-      <ChangeThemeFBA />
     </div>
   );
 }

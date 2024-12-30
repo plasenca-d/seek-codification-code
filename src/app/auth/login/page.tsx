@@ -1,6 +1,5 @@
 import { AnimatedSide } from "@/features/auth/presentation/components/animated-side";
 import LoginForm from "@/features/auth/presentation/components/login-form";
-import ChangeThemeFBA from "@/components/ui/change-theme-fba";
 
 export default function LoginPage() {
   return (
@@ -13,7 +12,6 @@ export default function LoginPage() {
           <LoginForm />
         </div>
       </main>
-      <ChangeThemeFBA />
     </div>
   );
 }

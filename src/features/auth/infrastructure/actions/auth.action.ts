@@ -8,7 +8,7 @@ import { RandomNumberGenerator } from "@/utils/random";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const login = async (email: string, password: string): Promise<User> => {
   await new Promise((resolve) =>
-    setTimeout(resolve, RandomNumberGenerator.randomNumber(1000, 5000))
+    setTimeout(resolve, RandomNumberGenerator.randomNumber(500, 1200))
   );
 
   const userWithToken = userMock(email);
@@ -23,7 +23,7 @@ export const login = async (email: string, password: string): Promise<User> => {
 
 export const logout = async (): Promise<void> => {
   await new Promise((resolve) =>
-    setTimeout(resolve, RandomNumberGenerator.randomNumber(1000, 5000))
+    setTimeout(resolve, RandomNumberGenerator.randomNumber(500, 1200))
   );
 
   await signOut();

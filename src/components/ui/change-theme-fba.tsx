@@ -45,7 +45,7 @@ export default function ChangeThemeFBA() {
 
   return (
     <div
-      className="absolute right-8 bottom-8 animate-fade-up z-50"
+      className="fixed right-8 bottom-8 animate-fade-up z-50"
       data-testid="change-theme-fba"
     >
       <div
