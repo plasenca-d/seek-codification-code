@@ -50,13 +50,42 @@ This project is organized into the following directories:
 
 ```
 .
-├── app/                 # Next.js app directory
-├── components/          # Shared UI components
-├── features/            # Domain-specific modules
-├── lib/                 # Utilities and custom libraries
-├── public/              # Static assets
-├── styles/              # Global styles
-└── tests/               # Unit and integration tests
+├── src/
+│   ├── components/
+│   ├── config/
+│   ├── data/
+│   ├── lib/
+│   ├── utils/
+│   └── app/
+│       ├── auth/
+│       │   ├── login/
+│       │   │   ├── page.tsx
+│       │   │   └── layout.tsx
+│       │   ├── page.tsx
+│       │   └── layout.tsx
+│       ├── components/
+│       │   ├── animated-side.tsx
+│       │   ├── change-theme-fba.tsx
+│       │   ├── login-form.tsx
+│       │   └── todo-list.tsx
+│       ├── page.tsx
+│       └── layout.tsx
+│   ├── features/
+│   │   ├── auth/
+│   │   │   ├── application/
+│   │   │   │   ├── use-cases/
+│   │   │   └── domain/
+│   │   │       ├── use-cases/
+│   │   │       ├── entities/
+│   │   │       ├── datasources/
+│   │   │       └── repositories/
+│   │   │   └── infrastructure/
+│   │   │       ├── datasources/
+│   │   │       └── repositories/
+|   │   |   └ ── presentation/
+│   │   │       ├── hooks/
+├── 
+├── package.json
 ```
 
 ---
