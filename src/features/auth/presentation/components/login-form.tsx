@@ -34,7 +34,7 @@ export default function LoginForm() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col gap-3 w-full md:w-96 px-8"
+          className="flex flex-col gap-3 w-full md:w-96 "
           data-testid="login-form"
         >
           {loginMutation.error && (
