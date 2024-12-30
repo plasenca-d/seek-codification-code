@@ -1,5 +1,5 @@
-import { AnimatedSide } from "@/auth/presentation/components/animated-side";
-import LoginForm from "@/auth/presentation/components/login-form";
+import { AnimatedSide } from "@/features/auth/presentation/components/animated-side";
+import LoginForm from "@/features/auth/presentation/components/login-form";
 import ChangeThemeFBA from "@/components/ui/change-theme-fba";
 
 export default function LoginPage() {
