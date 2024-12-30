@@ -27,6 +27,20 @@ export default function ChangeThemeFBA() {
     if (theme.theme === "dark") {
       theme.setTheme("light");
     }
+
+    if (
+      theme.theme === "system" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      theme.setTheme("light");
+    }
+
+    if (
+      theme.theme === "system" &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      theme.setTheme("dark");
+    }
   };
 
   return (
