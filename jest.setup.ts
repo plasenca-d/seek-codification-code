@@ -29,4 +29,17 @@ jest.mock("next/navigation", () => ({
     push: jest.fn(),
     prefetch: jest.fn(),
   })),
+  redirect: jest.fn(),
 }));
+
+jest.mock(
+  "next/headers",
+  async () =>
+    await {
+      cookies: jest.fn(() => ({
+        set: jest.fn(),
+        delete: jest.fn(),
+        get: jest.fn(),
+      })),
+    }
+);
