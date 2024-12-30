@@ -30,7 +30,10 @@ export default function ChangeThemeFBA() {
   };
 
   return (
-    <div className="absolute right-8 bottom-8 animate-fade-up z-50">
+    <div
+      className="absolute right-8 bottom-8 animate-fade-up z-50"
+      data-testid="change-theme-fba"
+    >
       <div
         className={cn(
           "rounded-full bg-primary w-12 h-12 flex items-center justify-center border-foreground",
@@ -38,6 +41,7 @@ export default function ChangeThemeFBA() {
         )}
       >
         <Button
+          data-testid="change-theme-fba-button"
           variant={"link"}
           size={"icon"}
           className="text-white"

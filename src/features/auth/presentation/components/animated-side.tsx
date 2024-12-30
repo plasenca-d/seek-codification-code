@@ -5,7 +5,10 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export function AnimatedSide() {
   return (
-    <AuroraBackground className="h-[calc(100vh-80px)] rounded-xl">
+    <AuroraBackground
+      data-testid="animated-side"
+      className="h-[calc(100vh-80px)] rounded-xl"
+    >
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 
 import { SESSION_COOKIE_NAME } from "@/config/constants/session";
 
-const protectedRoutes = ["/", "/working-on", "/home"];
+// const protectedRoutes = ["/", "/working-on", "/home"];
 const publicRoutes = ["/auth/login"];
 
 export default async function middleware(req: NextRequest) {
