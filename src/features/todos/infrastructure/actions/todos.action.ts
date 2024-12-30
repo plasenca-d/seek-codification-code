@@ -27,7 +27,7 @@ export const saveTodosToLocalStorage = (todos: Todo[]): void => {
  * @returns A list of todos
  */
 export const getTodos = async (): Promise<Todo[]> => {
-  await RandomNumberGenerator.randomSleep(1000, 5000);
+  await RandomNumberGenerator.randomSleep(500, 1200);
 
   return getTodosFromLocalStorage();
 };
@@ -41,7 +41,7 @@ export const getTodos = async (): Promise<Todo[]> => {
  * @returns void
  */
 export const clearAll = async (): Promise<void> => {
-  await RandomNumberGenerator.randomSleep(1000, 5000);
+  await RandomNumberGenerator.randomSleep(500, 1200);
 
   saveTodosToLocalStorage([]);
 };
@@ -55,7 +55,7 @@ export const clearAll = async (): Promise<void> => {
  * @returns void
  */
 export const clearAllCompleted = async (): Promise<void> => {
-  await RandomNumberGenerator.randomSleep(1000, 5000);
+  await RandomNumberGenerator.randomSleep(500, 1200);
 
   const todos = getTodosFromLocalStorage().filter(
     (todo) => todo.state !== "done"
@@ -73,7 +73,7 @@ export const clearAllCompleted = async (): Promise<void> => {
  * @returns void
  */
 export const deleteTodo = async (id: string): Promise<void> => {
-  await RandomNumberGenerator.randomSleep(1000, 5000);
+  await RandomNumberGenerator.randomSleep(500, 1200);
 
   const todos = getTodosFromLocalStorage().filter((todo) => todo.id !== id);
   saveTodosToLocalStorage(todos);
@@ -89,7 +89,7 @@ export const deleteTodo = async (id: string): Promise<void> => {
  * @returns The created todo
  */
 export const createTodo = async (todoLike: CreateTodoLike): Promise<Todo> => {
-  await RandomNumberGenerator.randomSleep(1000, 5000);
+  await RandomNumberGenerator.randomSleep(500, 1200);
 
   const todos = getTodosFromLocalStorage();
   const todo = {
@@ -115,7 +115,7 @@ export const createTodo = async (todoLike: CreateTodoLike): Promise<Todo> => {
  * @returns The updated todo
  */
 export const updateTodo = async (id: string, todo: Todo): Promise<Todo> => {
-  await RandomNumberGenerator.randomSleep(1000, 5000);
+  await RandomNumberGenerator.randomSleep(500, 1200);
 
   const todos = getTodosFromLocalStorage().map((t) => (t.id === id ? todo : t));
   saveTodosToLocalStorage(todos);

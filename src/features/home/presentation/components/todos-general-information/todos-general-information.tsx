@@ -8,9 +8,11 @@ export const TodosGeneralInformation = () => {
   return (
     <aside
       data-testid="todos-general-information"
-      className="bg-background flex justify-between items-center pt-4 pb-6"
+      className="bg-background flex justify-center md:justify-between items-center pt-4 pb-6"
     >
-      <CreateTodoButton />
+      <div className="hidden md:block">
+        <CreateTodoButton />
+      </div>
 
       <div className="flex flex-col items-center gap-3">
         <p className="text-lg md:text-2xl text-primary dark:text-primary-foreground font-bold">
@@ -22,7 +24,9 @@ export const TodosGeneralInformation = () => {
           <QuantityTodoByState state="done" />
         </div>
       </div>
-      <DeleteAllCompletedTodosButton />
+      <div className="hidden md:block">
+        <DeleteAllCompletedTodosButton />
+      </div>
     </aside>
   );
 };

@@ -6,7 +6,7 @@ export default function NavBar() {
     <nav className="bg-background flex justify-between items-center py-2">
       <div className="flex items-center gap-1">
         <Image src="/logo.png" alt="logo" width={60} height={60} />
-        <div className="text-lg">Todo List App</div>
+        <div className="hidden md:block text-lg">Todo List App</div>
       </div>
       <div>
         <UserInfo />

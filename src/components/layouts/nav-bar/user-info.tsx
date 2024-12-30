@@ -20,13 +20,18 @@ import { useAuthStore } from "@/features/auth/presentation/store/useAuth";
 
 export const UserInfo = () => {
   const user = useAuthStore((state) => state.user);
+  const logout = useAuthStore((state) => state.logout);
 
   return (
     <div className="flex flex-row gap-2 items-center">
       <div className="flex flex-row items-center gap-2">
         <div className="flex flex-col ">
-          <span className="font-bold">{user?.name || "No name"}</span>
-          <span className="text-sm">{user?.email || "No email"}</span>
+          <span className="text-sm md:text-lg font-bold">
+            {user?.name || "No name"}
+          </span>
+          <span className="text-xs md:text-sm text-muted-foreground">
+            {user?.email || "No email"}
+          </span>
         </div>
         <Avatar>
           <AvatarImage src="" />
@@ -48,7 +53,14 @@ export const UserInfo = () => {
           <DropdownMenuLabel>Mi cuenta</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem>
-            <Button onClick={() => signOut()}>Cerrar sesión</Button>
+            <Button
+              onClick={() => {
+                logout();
+                signOut();
+              }}
+            >
+              Cerrar sesión
+            </Button>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

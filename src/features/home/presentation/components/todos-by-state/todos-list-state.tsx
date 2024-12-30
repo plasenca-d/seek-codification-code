@@ -1,6 +1,5 @@
 "use client";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { TodoState } from "@/features/todos/domain/entities/todo-state.entity";
 
 import { useTodosByState } from "@/features/todos/presentation/hooks/useTodosByState";
@@ -28,23 +27,21 @@ export const TodoListState: React.FC<Props> = ({ state }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-80">
       <div
         className={cn(
-          "h-10 w-45 md:w-60 p-4 flex items-center rounded-md justify-between",
+          "h-10 p-4 flex items-center rounded-md justify-between",
           colorState()
         )}
       >
         <span className="font-bold">{textState()}</span>
         <CreateTodoByState state={state} />
       </div>
-      <ScrollArea className="w-45 md:w-60 h-full">
-        <div className="flex flex-col gap-4">
-          {todos.map((todo) => (
-            <TodoComponent key={todo.id} todo={todo} />
-          ))}
-        </div>
-      </ScrollArea>
+      <div className="flex flex-col gap-4">
+        {todos.map((todo) => (
+          <TodoComponent key={todo.id} todo={todo} />
+        ))}
+      </div>
     </div>
   );
 };
